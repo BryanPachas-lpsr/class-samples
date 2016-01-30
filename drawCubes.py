@@ -1,5 +1,5 @@
 import turtle
-
+#makes a regular rhombus
 def drawRegRhombus(myTurtle):
 	myTurtle.fillcolor("light blue")
 	myTurtle.begin_fill()
@@ -12,6 +12,7 @@ def drawRegRhombus(myTurtle):
 	myTurtle.right(120)
 	myTurtle.forward(20)
 	myTurtle.end_fill()
+#makes the opposite of the rhombus
 def drawOtherRhombus(myTurtle):
 	myTurtle.fillcolor("dark cyan")
 	myTurtle.begin_fill()
@@ -24,6 +25,7 @@ def drawOtherRhombus(myTurtle):
         myTurtle.left(120)
         myTurtle.forward(20)
 	myTurtle.end_fill()
+#Makes the top rhombus
 def drawTopRhombus(myTurtle):
 	myTurtle.fillcolor("dark blue")
 	myTurtle.begin_fill()
@@ -37,24 +39,27 @@ def drawTopRhombus(myTurtle):
 	myTurtle.left(120)
 	myTurtle.forward(20)
 	myTurtle.end_fill()	
+#Makes a cube
 def drawCube(myTurtle):
 	
 	drawTopRhombus(myTurtle)
 	drawRegRhombus(myTurtle)
 	drawOtherRhombus(myTurtle)
-
+#Places the cube side by side eachother
 def drawPlacementofCubes(myTurtle):
 	drawCube(myTurtle)
 	myTurtle.penup()
 	myTurtle.right(210)
 	myTurtle.forward(34)	
 	myTurtle.pendown()
+#Draws a row of cubes
 def drawCompleteRowofCubes(myTurtle):
 	count = 0
 	while count < 4:
 		drawPlacementofCubes(myTurtle)
 		count = count + 1
 	drawCube(myTurtle)
+#Prepares the next line
 def nextLine(myTurtle):
 	myTurtle.speed(0)	
 	drawCompleteRowofCubes(myTurtle)
@@ -75,6 +80,7 @@ def nextLine(myTurtle):
 	drawCompleteRowofCubes(myTurtle)
 	positioning(myTurtle)
 	positioning(myTurtle)
+#Positions the turtle to make more cube rows
 def positioning(myTurtle):
 	myTurtle.penup()
 	myTurtle.right(30)
@@ -92,6 +98,7 @@ def positioning(myTurtle):
         myTurtle.right(90)
         myTurtle.pendown()
 	drawCompleteRowofCubes(myTurtle)
+#Puts the functions on the turtle "Bear"
 Bear = turtle.Turtle()
 nextLine(Bear)
 turtle.exitonclick()
