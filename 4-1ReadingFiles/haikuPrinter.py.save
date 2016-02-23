@@ -1,0 +1,22 @@
+import time
+# Makes the variable equal to the file haiku1.txt 
+myFirstHaiku = open('haiku1.txt', 'r')
+# Prints the first line and prints what was in the original file using the variable that contains it
+print('Here is the first haiku:')
+print(myFirstHaiku.read())
+# Prints the following lines then makes the variable seconds ask for input
+print('I will give you the second haiku line by line.')
+print('How many seconds should I wait between lines?') 
+seconds = int(raw_input())
+# Makes the variable equal to the file haiku2.txt
+mySecondHaiku = open('haiku2.txt', 'r')
+# Makes the variable equal to the variable that is equal to what is in the file
+lineToPrint = mySecondHaiku.readline()
+# Makes a loop to repeat the haikus in a certain amount of given time from the user.
+while lineToPrint != "":
+	print(lineToPrint)
+	lineToPrint = mySecondHaiku.readline()
+	time.sleep(seconds) 
+# Closes the file to stop it from printing
+myFirstHaiku.close()
+mySecondHaiku.close()
