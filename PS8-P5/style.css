@@ -1,16 +1,27 @@
 body {
-	background-color: red;
-	
-	
+        background-color: black;
+        text-align: center;
+        
 }
-
-#header { 
-	font-family: Roboto;
-	background-color: blue;
+ 
+#header {
+        font-family: Helvetica;
+        background-color: blue;
+        
 }
-
+ 
 #OList {
-	
-	left: 50%;
-
+        font-size: 25px;
+        background-color: lightgreen;
+        font-family: Helvetica;
+}
+#UList {
+        font-size: 25px;
+        background-color: red;
+        font-family: Monaco;
+}
+#NPictures {
+        font-size: 25px;
+        background-color: yellow;
+        font-family: Tahoma;
 }
