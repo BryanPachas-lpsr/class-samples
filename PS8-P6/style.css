@@ -1,0 +1,77 @@
+body {
+      background-image: url("http://montgomerynews.com/content/articles/2010/08/30/sports/doc4c79ba15e81336364008751.jpg");
+      background-size: 300px;
+      
+}
+#LOGO {
+      text-align: center;
+}
+#SCHOOLNAME {
+  font-family: Roboto, Consolas, Courier;
+  color: white;
+  font-size: 45px;
+  text-align: center;
+  background-color: purple;
+}
+#Navbar ul {
+	margin: 0;
+	padding: 5px;
+	list-style-type: none;
+	text-align: center;
+	background-color: black;
+} 
+ 
+#Navbar ul li {
+	display: inline;
+	padding-right: 90;
+} 
+ 
+a {
+  color: white;
+  background-color: purple;
+  font-size: 25px;
+}
+a:hover {
+  color: white;
+  background-color: purple;
+}
+#Description {
+  width: 325px;
+  height: 250px;
+  background-color: purple;
+  float: left;
+  color: white;
+  font-family: Roboto, Consolas, Courier;
+  font-size: 20px;
+  margin: 3px;
+  border: 9px;
+}
+#SecondDescription {
+  float: right;
+  width: 325px;
+  height: 225px;
+  background-color:purple;
+  font-family: Roboto, Consolas, Courier;
+  color: white;
+  font-size: 20px;
+  margin: 3px;
+  border: 9px:
+}
+#PIMAGE {
+  text-align: center;
+  
+}
+#BaseballPIC {
+  float: right;
+}
+#SportsPIC {
+  float: left;
+}
+#Copyright {
+  background-color: purple;
+  clear: both;
+  text-align: center;
+  color: white;
+  font-family: Roboto, Consolas, Courier;
+  font-size: 20px;
+}
