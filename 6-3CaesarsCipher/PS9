@@ -1,0 +1,69 @@
+import string
+# applyCipher.py
+# A program to encrypt/decrypt user text
+# using Caesar's Cipher
+# 
+# Author: mflax [at] leadps.org
+
+# makes a mapping of encoded alphabet to decoded alphabet
+# arguments: key
+# returns: dictionary of mapped letters
+def createDictionary(key):
+  bigAlpha = list(string.ascii_uppercase)
+  alpha = list(string.ascii_lowercase)
+  alphaDict = {} 
+  count = 0
+  for x in alpha: 
+    alphaDict[x] = alpha[(count + key) % 26]
+    count = count + 1
+  for y in bigAlpha:
+    alphaDict[y] = bigAlpha[(count + key) % 26]
+    count = count + 1
+  alphaDict[" "] = " "
+  return alphaDict
+	# placeholder
+
+# gets the encrypted message from the user
+# arguments: none
+# returns: encoded message
+def getMessage(encrypt):
+  return encrypt
+  
+  
+# for each letter in message, decodes and records
+# arguments: encoded message, dictionary
+# returns: decoded message
+def decodeMessage(message, dictionary):
+  emptytoNewMessage = ''
+  for m in encrypt: 
+    emptytoNewMessage = emptytoNewMessage + dictionary[m]
+  return emptytoNewMessage
+# outputs the decoded message to the terminal
+# arguments: decoded message
+# returns: none
+def printMessage(message2):
+	print("Here is you decoded message:")
+	print(message2)
+
+
+# execution starts here
+
+# ask user for key
+
+
+
+print("What key would you like to use to decode?")
+key = int(input())
+dictionary = createDictionary(key)
+print("What message would you like to decode?")
+encrypt = input()
+encodedMessage = getMessage(encrypt)
+
+decodedMessage = decodeMessage(encodedMessage, dictionary)
+
+printMessage(decodedMessage)
+
+
+
+
+
